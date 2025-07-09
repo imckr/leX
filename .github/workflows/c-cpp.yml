@@ -13,11 +13,12 @@ jobs:
 
     steps:
     - uses: actions/checkout@v4
-    - name: Configure (CMake)
+    - name: Clean build directory
       run: |
-        mkdir -p build
-        cd build
-        cmake ..
+        rm -rf build
+        mkdir build
+    - name: Configure with CMake
+      run: cmake -B build -S .
     - name: make
       run: make -C build
     - name: make check
