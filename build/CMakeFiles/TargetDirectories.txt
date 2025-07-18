@@ -1,7 +1,0 @@
-/home/ec2-user/chandra/lex/build/CMakeFiles/lex.dir
-/home/ec2-user/chandra/lex/build/CMakeFiles/test.dir
-/home/ec2-user/chandra/lex/build/CMakeFiles/edit_cache.dir
-/home/ec2-user/chandra/lex/build/CMakeFiles/rebuild_cache.dir
-/home/ec2-user/chandra/lex/build/tests/CMakeFiles/test.dir
-/home/ec2-user/chandra/lex/build/tests/CMakeFiles/edit_cache.dir
-/home/ec2-user/chandra/lex/build/tests/CMakeFiles/rebuild_cache.dir
