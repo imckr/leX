@@ -1,0 +1,14 @@
+#include "treeblob.h"
+
+int TreeBlob::CreateTreeBlob(const string &filenames) {
+
+	int is_ok = EXIT_FAILURE;
+
+	//std::ofstream treeblob_file("");
+
+	string code = "100023";
+	
+
+	return is_ok;
+
+}

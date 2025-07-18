@@ -134,7 +134,23 @@ std::string Add::Create_object(const std::string &file_path){
     	std::cout<<"Compressed Content size - "<<comp_content.size()<<std::endl;
 
     	// Compute SHA-1 hash
-    	std::string hash = ComputeSHA1(file_path);
+
+//	auto now = std::chrono::system_clock::now();
+//    	std::time_t time = std::chrono::system_clock::to_time_t(now);
+    	//std::cout << "Current time: " << std::ctime(&time);
+	std::time_t t = std::time(nullptr);
+    	std::tm* now = std::localtime(&t);
+
+//   	std::string time = "Date: " + (now->tm_year + 1900) + (now->tm_mon + 1) + now->tm_mday + '\n';
+
+	char mbstr[100];
+        std::strftime(mbstr, 100, "%d/%m/%Y %T", std::localtime(&t));
+        std::string time (mbstr);
+
+//	std::string time = "Date: " + to_string(now->tm_mday) + to_string()
+
+	//istringstream time(std::ctime(&time));
+    	std::string hash = ComputeSHA1(file_path + comp_content + time);
     	std::string hash_mod = hash.substr(2);
     	std::string file_blob_path = object_directory + "/" + hash[0] + hash[1] + "/" + hash_mod;
     	//std::cout<<file_blob_path<<std::endl;

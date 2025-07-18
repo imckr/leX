@@ -1,9 +1,11 @@
 #include <bits/stdc++.h>
-#include "Add.h"
+#include <ctime>
+#include <chrono>
+//#include "Add.h"
 
 using namespace std;
-namespace fs = filesystem;
-
+//namespace fs = filesystem;
+/*
 bool is_New() {
 
 //working...
@@ -79,10 +81,25 @@ bool is_New() {
 
 }
 
-
+*/
 int main() {
 
-	bool res = is_New();
+//	bool res = is_New();
+
+/*	std::time_t now = time(0);
+	std::tm *ltm = localtime(&now); 
+	std::String date = ltm->tm_mday + "/" + (1 + ltm->tm_mon) + "/" + (1900 + ltm->tm_year) + " " + (1 + ltm->tm_hour) + ":" + (1 + ltm->tm_min) + ":" + (1 + ltm->tm_sec);
+*/
+
+	std::time_t t = std::time(nullptr);
+        std::tm* now = std::localtime(&t);
+
+        //std::string time = "Date: " + (now->tm_year + 1900) + (now->tm_mon + 1) + now->tm_mday + '\n';
+
+	char mbstr[100];
+ 	std::strftime(mbstr, 100, "%d/%m/%Y %T", std::localtime(&t));
+ 	std::string time (mbstr);
+	std::cout << time << std::endl;
 
     	return 0;
 }
