@@ -11,7 +11,7 @@
 - Recursive directory scanning
 - Commit structure design in progress
 
-### 🔍 Why?
+### Why?
 To learn how VCS stores objects, builds commits, and tracks file changes — by rebuilding it from scratch in C++.
 
 ---
